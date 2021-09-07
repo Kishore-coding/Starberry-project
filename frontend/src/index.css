@@ -1,0 +1,311 @@
+@import 'antd/dist/antd.css';
+
+body {
+  margin: 0;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header{
+  width: 100%;
+  background-color:#f0eaea;
+  text-align: center;
+  font-size: 30px;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+}
+
+.appartments{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  align-items: center;
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+
+.appartments li{
+  padding:1rem 2rem;
+}
+
+.appartment{
+  display: flex;
+  flex-direction: column;  
+  height:100%;
+  width: 100%;
+}
+.appartment img{
+  width:21rem;
+  height:15rem;
+}
+
+.view-page{
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-page{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-container{
+  flex: 2 0 55vw;
+   padding-top: 80px;
+}
+
+.main-image{
+  width: 53.7vw;
+   height: 20vw;
+    margin: 0 1rem
+}
+.right-container{
+  flex: 1 0 40vw;
+   padding-top: 120px;
+    margin: 1rem;
+}
+
+
+.view-images{
+  display:flex;
+  /* flex-wrap: wrap;  */
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+
+.view-images li{  
+  padding:1rem;
+}
+
+/* .view-image{
+  display: flex;
+  flex-direction: column;  
+  height:100%;
+} */
+.view-image img{
+  width: 15rem;
+  height: 13rem;
+}
+.contact-agent{
+  text-align: center;
+}
+.contact-agent button{
+  width:40vw;
+  margin:1rem 0;
+  padding:10px 0;
+  color:white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 21px;
+  cursor:pointer;
+}
+
+.features{
+  font-size: 20px;
+  width: 80%;
+  margin-right: 5rem;
+}
+.facts{
+  font-weight: bold;
+}
+.link a{
+  color:grey
+}
+
+.description{
+  font-size: 19px;
+}
+.broker-image img{
+  width:100px;
+  height:100px;
+  padding-right: 1rem;
+}
+
+.filter-container{
+  width: 95%; 
+  margin: 0 auto;
+}
+.filter-list{
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0 1rem; */
+  
+}
+.filter-list li{
+  list-style: none;
+  color:#8d8282;
+  font-size:15px
+
+}
+.map{
+  height:150;
+  width:500;
+  margin-bottom: 5rem;
+}
+
+.footer{
+  width: 100%;
+  background-color:#f0eaea;
+  text-align: center;
+  font-size: 30px;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+}
+
+
+@media screen and (max-width:375px){  
+  
+  .appartment img{
+    width:16rem;
+    height:13rem;
+
+  }
+
+  .filter-container{
+    width: "100%"; margin: "0"
+  }
+  .filter-list{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 15px;
+    }
+
+    .filter-list li{
+      /* background-color: green;    */
+      border: 1px solid blue; 
+      padding: 5px 0;
+      margin-top: 5px;
+      text-align: center;
+    }
+   
+
+    .header{
+      font-size: 23px;
+    }
+    .footer{
+      font-size: 23px;
+    }
+    .main-image{
+      width: 90vw;
+      height: 30vw;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .view-images{   
+      justify-content: space-around;   
+    } 
+    .view-image img{
+      width: 100px;
+      height: 70px;
+    }
+    .right-container{    
+      padding-top: 40px;
+   }
+   .contact-agent button{
+    width:80vw; 
+    padding:5px 0;
+    font-size: 15px;   
+  }
+  .features{
+    font-size: 16px;
+  }
+  .map{
+    width: 280px;
+  }
+    
+    
+}
+
+@media screen and (min-width:376px) and (max-width:700px) {
+  .filter-container{
+    width: "100%"; margin: "0"
+  }
+  .filter-list{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 15px;
+    }
+
+    .filter-list li{
+      border: 1px solid blue; 
+      padding: 5px 0;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    .main-image{
+      width: 90vw;
+      height: 30vw;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .view-images{   
+      justify-content: center;   
+    } 
+    .view-image img{
+      width: 10rem;
+      height: 8rem;
+    }
+    .right-container{    
+       padding-top: 40px;
+    }
+    .contact-agent button{
+      width:80vw; 
+      padding:5px 0;
+      font-size: 15px;   
+    }
+    
+}
+
+@media screen and (min-width:768px) and (max-width:1000px) {
+  .features{
+    width: 90%;
+    font-size: 18px;
+  }
+  .description{
+    padding: 0 10px;
+  }
+  .contact-agent button{
+    width:30vw;    
+    font-size: 17px;
+  }  
+  .appartment img{
+    width:18rem;
+    height:12rem;
+  }
+ 
+  .main-image{
+    width: 90vw;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .view-images{   
+    justify-content: center;   
+  } 
+  .view-image img{
+    width: 16rem;
+    height: 12rem;
+  }
+  .right-container{    
+     padding-top: 40px;
+  }
+}
+
+
