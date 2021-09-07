@@ -31,7 +31,7 @@ function Register() {
 
       history.push("/");
     } catch (err) {
-      err.response.data.msg && setError(err.response.data.msg);
+      err.response?.data.msg && setError(err.response.data.msg);
     }
   };
   document.title = "Register page";
