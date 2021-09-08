@@ -5,10 +5,10 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(express.json());
-app.use(cors());
 
-const PORT = process.env.PORT || 5000;
+app.use(express.json());
+
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("server started"));
 
 //setup mondodb
@@ -26,4 +26,10 @@ mongoose.connect(
   }
 );
 //router setup
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+    allowedHeaders: "*",
+  })
+);
 app.use("/users", require("./routes/userRoutes"));
