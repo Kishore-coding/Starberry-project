@@ -1,9 +1,37 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function ViewPage(props) {
   const viewData = props.location.state;
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <React.Fragment>
@@ -19,20 +47,21 @@ function ViewPage(props) {
             alt={viewData?.Building_Type}
           />
 
-          <ul className="view-images">
-            <li className="view-image">
-              <img
-                src={viewData?.Images[1]?.url}
-                alt={viewData?.Building_Type}
-              />
-            </li>
-            <li className="view-image">
-              <img
-                src={viewData?.Images[2]?.url}
-                alt={viewData?.Building_Type}
-              />
-            </li>
-          </ul>
+          <section className="slider">
+            <Slider {...settings}>
+              {viewData?.Images.map((image) => (
+                <div>
+                  <h1>
+                    <ul className="slider_images">
+                      <li className="slider_image">
+                        <img src={image.url} alt="imagesss" />
+                      </li>
+                    </ul>
+                  </h1>
+                </div>
+              ))}
+            </Slider>
+          </section>
         </div>
         <div className="right-container">
           <div style={{ textAlign: "end" }}>
